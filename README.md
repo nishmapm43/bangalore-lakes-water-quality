@@ -22,7 +22,6 @@ Bangalore's lakes are under constant pollution pressure, but the official monito
 
 - **7 of 19 major lakes are chronically oxygen-deficient** — Dissolved Oxygen fell below the healthy minimum (4.0 mg/L) in 3 or more of the 13 months studied. Jakkur Lake was the worst, sitting below the threshold in **7 of 13 months** despite its public reputation as a lake-restoration success story.
 - **Lalbagh Tank recorded an isolated BOD spike of 56 mg/L in August 2025** — more than double any other tracked lake that month, flagged as a candidate for follow-up investigation (event-driven pollution vs. sustained decline).
-- A systematic **data-extraction bug was identified and corrected**: PDF-to-text conversion had silently replaced the syllable "na" with a hyphen in many lake names (e.g. *Karihoba-Halli* → *Karihobanahalli*), fragmenting single lakes into multiple entries. Fixing this reduced 174 raw name variants down to ~140 genuinely distinct lakes.
 
 ## Visuals
 
