@@ -34,7 +34,7 @@ Watch which lakes stay at the top of the pollution ranking month after month.
 
 
 ### Interactive Lake Map
-An interactive Folium map plotting all monitored lakes — [view the map](final_dashboard_map.html) (download and open in a browser, or see the live-hosted version linked above).
+An interactive Folium map plotting all monitored lakes — [view the map]([final_dashboard_map.html](https://nishmapm43.github.io/bangalore-lakes-water-quality/final_dashboard_map.html)) (download and open in a browser, or see the live-hosted version linked above).
 
 ### DO Recovery Simulator
 A Streamlit what-if tool: select a lake, simulate a BOD reduction, and see the predicted DO recovery against the health threshold.
