@@ -51,6 +51,28 @@ Each panel shows one chronically low-oxygen lake against the 4.0 mg/L health thr
 
 ![DO Trend Small Multiples](do_small_multiples.png)
 
+## Why This Project
+Bengaluru's lakes are under constant pollution pressure, but the data that could actually help track and fix this — monthly water-quality reports from the Karnataka State Pollution Control Board (KSPCB) — is published as scanned PDF documents, not usable datasets. Anyone wanting to understand lake health over time first has to manually read through dozens of PDF reports.
+
+I built a pipeline that turns 13 months of these government PDFs into a single, clean dataset, then used it to answer a simple question: which Bangalore lakes are chronically polluted, which are improving, and which had one-off pollution events worth investigating?
+
+## What I Did
+Extracted water-quality data from 13 monthly KSPCB PDF reports (Nov 2024 – Nov 2025) using pdfplumber, pulling out station-level readings for BOD, Dissolved Oxygen, pH, temperature, and more.
+Combined all 13 months into a single dataset — 1,720 station-month records across 273 monitoring stations.
+Found and fixed a hidden data-quality bug: the PDF-to-text extraction had silently corrupted lake names (e.g. splitting "Karihobanahalli" into "Karihoba" + "-Halli"), fragmenting single lakes into multiple fake entries. Using fuzzy string matching, I merged these duplicates — reducing 174 raw name variants down to ~140 genuinely distinct lakes.
+Built four ways to explore lake health:
+A racing bar chart ranking 19 well-known lakes by pollution (BOD) every month, to separate chronic hotspots from one-off spikes
+DO trend charts comparing each lake's oxygen levels against the healthy minimum (4.0 mg/L)
+An interactive map plotting every monitored lake with its water quality status
+A "what-if" simulator (Streamlit) that predicts how much a lake's oxygen would recover if pollution (BOD) were reduced by a chosen amount
+
+## What Could Come Next
+
+
+Extend the pipeline to automatically ingest new KSPCB monthly reports as they're published, rather than a fixed 13-month window
+Add a Water Quality Index (WQI) score combining BOD, DO, pH, and temperature into a single "Good / Neutral / Critical" status per lake, for faster at-a-glance reading
+Investigate the Lalbagh Tank August 2025 spike further using rainfall data, to test whether it correlates with runoff events
+
 ## Data Pipeline
 
 | Stage | Tool |
