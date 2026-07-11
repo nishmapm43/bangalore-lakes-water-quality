@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_81e1aae4e62bdfa178cdb2271868128f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; bottom: 50px; left: 50px; width: 260px; height: 160px; 
+     border:2px solid #555; z-index:9999; font-size:12px; background-color:white; 
+     opacity: 0.95; padding: 10px; border-radius: 8px;">
+     <b style="font-size:14px;">Water Quality Criteria</b><br>
+     <hr style="margin: 5px 0;">
+     🟢 <b>Good:</b> BOD < 10, DO > 5<br>
+     🟠 <b>Neutral:</b> BOD 10–20, DO 3–5<br>
+     🔴 <b>Critical:</b> BOD > 20, DO < 3
+     </div>
+     
+    
+            <div class="folium-map" id="map_81e1aae4e62bdfa178cdb2271868128f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_81e1aae4e62bdfa178cdb2271868128f = L.map(
+                "map_81e1aae4e62bdfa178cdb2271868128f",
+                {
+                    center: [12.9716, 77.5946],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5ddea291d8f5292ffb57b389f165941c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5ddea291d8f5292ffb57b389f165941c.addTo(map_81e1aae4e62bdfa178cdb2271868128f);
+        
+    
+            var feature_group_5ff78c10e0e755cf36de79f665b0e93d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_4017911b9805834964d9baa38b840473 = L.circleMarker(
+                [13.096667, 77.4586309],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_4017911b9805834964d9baa38b840473.bindTooltip(
+                `<div>
+                     <b>Alur Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 5.9 mg/L<br>pH: 8.0<br>Temp: 24.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c466bfff96e9bb62912c42ec5b4b7e96 = L.circleMarker(
+                [13.050527, 77.47942],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_c466bfff96e9bb62912c42ec5b4b7e96.bindTooltip(
+                `<div>
+                     <b>Anchepalya Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.4 mg/L<br>pH: 6.7<br>Temp: 22.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a6cda5ebc9dbe442b200e643011529d = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_1a6cda5ebc9dbe442b200e643011529d.bindTooltip(
+                `<div>
+                     <b>Anja-pura Lake ( Avala Halli Lake) Anja-pu</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.4 mg/L<br>pH: 6.8<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d1a7705fa51f8831d49c6b4a346455d = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_3d1a7705fa51f8831d49c6b4a346455d.bindTooltip(
+                `<div>
+                     <b>Basava-pura Lake Ayyappa -gr Main Road</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.9 mg/L<br>pH: 8.3<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_973eedc00a57bc38086a98d405d24d1c = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_973eedc00a57bc38086a98d405d24d1c.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.9 mg/L<br>pH: 6.8<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02a43531c0aa7eaf137e4a41b574451f = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_02a43531c0aa7eaf137e4a41b574451f.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake Ayyappa Nagr Main
+Road , K. R. Puram , Bengaluru</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.1 mg/L<br>pH: 8.2<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06dbf1628eb01b8549e4247bb0d37242 = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_06dbf1628eb01b8549e4247bb0d37242.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake Ayyappa Nagr Main Road , K.
+R. Puram , Bengaluru</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 6.6 mg/L<br>pH: 7.6<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ea15645c4a4a92c7167c6c3e2959e47 = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_4ea15645c4a4a92c7167c6c3e2959e47.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake Ayyappa Nagr Main Road , K. R. Puram ,
+Bengaluru</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 5.6 mg/L<br>pH: 6.9<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92987566da04e594495582e863b457b3 = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_92987566da04e594495582e863b457b3.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake Ayyappa Nagr Main Road, K.
+R. Puram , Bengaluru</b><br>Status: Good<br>BOD: 5.0 mg/L<br>DO: 5.5 mg/L<br>pH: 7.4<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9ce3f37eeb9b7538472e5a3fc5a4cf7 = L.circleMarker(
+                [12.9970929, 77.6656728],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_d9ce3f37eeb9b7538472e5a3fc5a4cf7.bindTooltip(
+                `<div>
+                     <b>Benniganahalli Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.1 mg/L<br>pH: 7.1<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_592de27c50c2ef5a532d014079d675cc = L.circleMarker(
+                [13.0509021, 77.7405306],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_592de27c50c2ef5a532d014079d675cc.bindTooltip(
+                `<div>
+                     <b>Cheemasandra</b><br>Status: Good<br>BOD: 5.0 mg/L<br>DO: 5.3 mg/L<br>pH: 8.1<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_053526a3597f7d76c6025ce5b6082911 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_053526a3597f7d76c6025ce5b6082911.bindTooltip(
+                `<div>
+                     <b>Chin-ppa-halli Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.5 mg/L<br>pH: 8.3<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d7561345773dfc4ae2caf2be3e3834a = L.circleMarker(
+                [13.0018869, 77.7032409],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_6d7561345773dfc4ae2caf2be3e3834a.bindTooltip(
+                `<div>
+                     <b>Devasandra Lake</b><br>Status: Good<br>BOD: 8.0 mg/L<br>DO: 5.2 mg/L<br>pH: 7.3<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01c865cc45507d1f3e62b2c3b1ac09d2 = L.circleMarker(
+                [12.8559543, 77.6048513],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_01c865cc45507d1f3e62b2c3b1ac09d2.bindTooltip(
+                `<div>
+                     <b>Doddakammanahalli Lake,
+Doddakammanahalli Phase2, Tejaswini</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.0 mg/L<br>pH: 7.0<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a62202701b419aad333fcad4af5e6dc = L.circleMarker(
+                [12.8559543, 77.6048513],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_8a62202701b419aad333fcad4af5e6dc.bindTooltip(
+                `<div>
+                     <b>Doddakammanahalli Lake,
+Doddakammanahalli Phase2, Tejaswini
+Nagar</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.3 mg/L<br>pH: 6.6<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31fc0e7e799618765855836581798604 = L.circleMarker(
+                [12.8559543, 77.6048513],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_31fc0e7e799618765855836581798604.bindTooltip(
+                `<div>
+                     <b>Doddakammanahalli Lake, Doddakammanahalli Phase2,
+Tejaswini Nagar</b><br>Status: Good<br>BOD: 8.0 mg/L<br>DO: 5.4 mg/L<br>pH: 7.4<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87ec95a58b25933b9e2f7a4e1f1bff80 = L.circleMarker(
+                [12.8559543, 77.6048513],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_87ec95a58b25933b9e2f7a4e1f1bff80.bindTooltip(
+                `<div>
+                     <b>Doddakammanahalli lake, Doddakammanahalli
+phase2, tejaswini nagar</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 5.2 mg/L<br>pH: 8.1<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c932308e4ab89017245dcbea124fe70 = L.circleMarker(
+                [12.8568221, 77.6598479],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_6c932308e4ab89017245dcbea124fe70.bindTooltip(
+                `<div>
+                     <b>Doddathogur Lake ,
+Doddathoguru Vill,Bengaluru</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.4 mg/L<br>pH: 7.8<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0eb15d728b3e7a3c9ca655a393c97bb4 = L.circleMarker(
+                [12.8568221, 77.6598479],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_0eb15d728b3e7a3c9ca655a393c97bb4.bindTooltip(
+                `<div>
+                     <b>Doddathogur Lake , Doddathoguru Vill,Bengaluru</b><br>Status: Good<br>BOD: 5.0 mg/L<br>DO: 6.0 mg/L<br>pH: 8.3<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_201e27ddbbcc1f406c971da3eb474955 = L.circleMarker(
+                [12.9909427, 77.6959734],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_201e27ddbbcc1f406c971da3eb474955.bindTooltip(
+                `<div>
+                     <b>Garudacharpalya lake-2</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.2 mg/L<br>pH: 7.3<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee6562cb38b5afbc828f0e7c2a7aa042 = L.circleMarker(
+                [13.1671063, 77.4921957],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_ee6562cb38b5afbc828f0e7c2a7aa042.bindTooltip(
+                `<div>
+                     <b>Hesaraghatta Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.1 mg/L<br>pH: 8.2<br>Temp: 24.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0906f938d00c995eac68a4c2d047761a = L.circleMarker(
+                [12.8700812, 77.6042048],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_0906f938d00c995eac68a4c2d047761a.bindTooltip(
+                `<div>
+                     <b>Hulimavu Lake</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.2 mg/L<br>pH: 7.6<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bbfcd1b4e4fba9f42bef4c25d6d48809 = L.circleMarker(
+                [12.8653973, 77.5898754],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_bbfcd1b4e4fba9f42bef4c25d6d48809.bindTooltip(
+                `<div>
+                     <b>Kalena Agrahara Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.1 mg/L<br>pH: 6.9<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0bdd9f069f8d512edbc1b632132d9135 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_0bdd9f069f8d512edbc1b632132d9135.bindTooltip(
+                `<div>
+                     <b>Kan-halli Lake Kan-halli, Bengaluru</b><br>Status: Good<br>BOD: 8.0 mg/L<br>DO: 6.0 mg/L<br>pH: 7.1<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3afd7adee22c84c481b37464bd3a26f = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_b3afd7adee22c84c481b37464bd3a26f.bindTooltip(
+                `<div>
+                     <b>Kan-mangala Lake Hoskote Main Road ,
+Bengalore</b><br>Status: Good<br>BOD: 7.0 mg/L<br>DO: 6.4 mg/L<br>pH: 6.6<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8e0a826edbc56014020af694bca47b2 = L.circleMarker(
+                [13.0288051, 77.7743346],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_c8e0a826edbc56014020af694bca47b2.bindTooltip(
+                `<div>
+                     <b>Kannamangala Lake Hoskote
+Main Road , Bengalore</b><br>Status: Good<br>BOD: 5.0 mg/L<br>DO: 5.5 mg/L<br>pH: 8.1<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_342d488456c0c1211c15091861932d98 = L.circleMarker(
+                [13.0288051, 77.7743346],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_342d488456c0c1211c15091861932d98.bindTooltip(
+                `<div>
+                     <b>Kannamangala Lake Hoskote Main
+Road , Bengalore</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.6 mg/L<br>pH: 7.2<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_721a428f1d10301dd788885a4b3b9e18 = L.circleMarker(
+                [13.0288051, 77.7743346],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_721a428f1d10301dd788885a4b3b9e18.bindTooltip(
+                `<div>
+                     <b>Kannamangala Lake Hoskote Main Road
+, Bengalore</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.4 mg/L<br>pH: 8.2<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_29810c94a552d212d570556344d53b71 = L.circleMarker(
+                [13.0288051, 77.7743346],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_29810c94a552d212d570556344d53b71.bindTooltip(
+                `<div>
+                     <b>Kannamangala Lake Hoskote Main Road,
+Bengalore</b><br>Status: Good<br>BOD: 6.0 mg/L<br>DO: 5.6 mg/L<br>pH: 7.6<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44955ce04fc6daa4968e8bbe4838906a = L.circleMarker(
+                [12.9049906, 77.6680265],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_44955ce04fc6daa4968e8bbe4838906a.bindTooltip(
+                `<div>
+                     <b>Kasavanahalli Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.1 mg/L<br>pH: 7.9<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9de9ae80e8ba8a42ca47b3fa755b8b34 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_9de9ae80e8ba8a42ca47b3fa755b8b34.bindTooltip(
+                `<div>
+                     <b>Kowdhe-halli Tank</b><br>Status: Good<br>BOD: 7.0 mg/L<br>DO: 6.4 mg/L<br>pH: 8.5<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39540776f1e2633a9a2ec532d4b3590b = L.circleMarker(
+                [12.8791972, 77.6611797],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_39540776f1e2633a9a2ec532d4b3590b.bindTooltip(
+                `<div>
+                     <b>Parappana Agrahara Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.9 mg/L<br>pH: 7.9<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b81c0c2f4ea40bfbf7e5b0c537559380 = L.circleMarker(
+                [13.0099946, 77.5737934],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_b81c0c2f4ea40bfbf7e5b0c537559380.bindTooltip(
+                `<div>
+                     <b>Sankey Tank</b><br>Status: Good<br>BOD: 5.0 mg/L<br>DO: 6.2 mg/L<br>pH: 7.4<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b17b0d56f1cf53727e3e648cc6225f30 = L.circleMarker(
+                [12.8698009, 77.7692887],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_b17b0d56f1cf53727e3e648cc6225f30.bindTooltip(
+                `<div>
+                     <b>Sompura Lake</b><br>Status: Good<br>BOD: 5.0 mg/L<br>DO: 5.4 mg/L<br>pH: 7.3<br>Temp: 26.8°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a57eb26ac9926d8f99425256372dfbbb = L.circleMarker(
+                [12.9483533, 77.739263],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_a57eb26ac9926d8f99425256372dfbbb.bindTooltip(
+                `<div>
+                     <b>Varthur Lake</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 5.8 mg/L<br>pH: 7.3<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bfba2e2f260513e3ff9b4d959aa8e51 = L.circleMarker(
+                [12.8531951, 77.6330953],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_5bfba2e2f260513e3ff9b4d959aa8e51.bindTooltip(
+                `<div>
+                     <b>Vittasandra Lake, Vittasandra,</b><br>Status: Good<br>BOD: 4.0 mg/L<br>DO: 6.6 mg/L<br>pH: 8.0<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_046eea54ae222f83768466aeefcba715 = L.circleMarker(
+                [12.8531951, 77.6330953],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5ff78c10e0e755cf36de79f665b0e93d);
+        
+    
+            circle_marker_046eea54ae222f83768466aeefcba715.bindTooltip(
+                `<div>
+                     <b>Vittasandra Lake, vittasandra,</b><br>Status: Good<br>BOD: 5.0 mg/L<br>DO: 5.7 mg/L<br>pH: 7.5<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_5ff78c10e0e755cf36de79f665b0e93d.addTo(map_81e1aae4e62bdfa178cdb2271868128f);
+        
+    
+            var feature_group_99787cefcd278f435ebbce9d88ea6d7a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_de2f52cb4ca8f48e856ae41072356196 = L.circleMarker(
+                [13.079959, 77.5291386],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_de2f52cb4ca8f48e856ae41072356196.bindTooltip(
+                `<div>
+                     <b>Abbigere Lake</b><br>Status: Neutral<br>BOD: 6.0 mg/L<br>DO: 4.6 mg/L<br>pH: 7.0<br>Temp: 24.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5d9f78a9d7bf76890cdb35e97bbf5fd = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_c5d9f78a9d7bf76890cdb35e97bbf5fd.bindTooltip(
+                `<div>
+                     <b>Basava-pura Lake</b><br>Status: Neutral<br>BOD: 4.0 mg/L<br>DO: 7.0 mg/L<br>pH: 8.3<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39686acd12f41c4e58ad29c5eb0c8eb2 = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_39686acd12f41c4e58ad29c5eb0c8eb2.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake Ayyappa Nagr
+Main Road , K. R. Puram , Bengaluru</b><br>Status: Neutral<br>BOD: 7.0 mg/L<br>DO: 4.2 mg/L<br>pH: 7.2<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12415c8c6615af07cc67b0292b20ce3b = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_12415c8c6615af07cc67b0292b20ce3b.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake Ayyappa Nagr Main Road
+, K. R. Puram , Bengaluru</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 4.4 mg/L<br>pH: 7.5<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07746204194ff6247985b0e5d59ca17b = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_07746204194ff6247985b0e5d59ca17b.bindTooltip(
+                `<div>
+                     <b>Benniga-halli Lake</b><br>Status: Neutral<br>BOD: 7.0 mg/L<br>DO: 6.2 mg/L<br>pH: 8.4<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_22ab5c3735cc5d42ba007207ebf41d1e = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_22ab5c3735cc5d42ba007207ebf41d1e.bindTooltip(
+                `<div>
+                     <b>Chikkaba-vara Lake</b><br>Status: Neutral<br>BOD: 5.0 mg/L<br>DO: 4.9 mg/L<br>pH: 7.0<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16f7b7fe5c51164dd50122a461948a5f = L.circleMarker(
+                [13.0827492, 77.5080115],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_16f7b7fe5c51164dd50122a461948a5f.bindTooltip(
+                `<div>
+                     <b>Chikkabanavara Lake</b><br>Status: Neutral<br>BOD: 5.0 mg/L<br>DO: 4.9 mg/L<br>pH: 6.6<br>Temp: 24.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5dda9b2ad4e92b12fffec57d576a3b5 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_d5dda9b2ad4e92b12fffec57d576a3b5.bindTooltip(
+                `<div>
+                     <b>Devarabeesa-halli Lake</b><br>Status: Neutral<br>BOD: 4.0 mg/L<br>DO: 3.2 mg/L<br>pH: 8.0<br>Temp: 29.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_586fe923a0e79916d291ec7c27188ee8 = L.circleMarker(
+                [12.8559543, 77.6048513],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_586fe923a0e79916d291ec7c27188ee8.bindTooltip(
+                `<div>
+                     <b>Doddakammanahalli Lake,
+Doddakammanahalli Phase2,</b><br>Status: Neutral<br>BOD: 5.0 mg/L<br>DO: 5.7 mg/L<br>pH: 6.6<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e48bd04519ea85e43fe2eaa0947de56a = L.circleMarker(
+                [12.8559543, 77.6048513],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_e48bd04519ea85e43fe2eaa0947de56a.bindTooltip(
+                `<div>
+                     <b>Doddakammanahalli Lake,
+Doddakammanahalli Phase2,
+Tejaswini Nagar</b><br>Status: Neutral<br>BOD: 7.0 mg/L<br>DO: 5.1 mg/L<br>pH: 7.3<br>Temp: 29.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d33b971378f97874d6a97c8caccc001 = L.circleMarker(
+                [12.8568221, 77.6598479],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_6d33b971378f97874d6a97c8caccc001.bindTooltip(
+                `<div>
+                     <b>Doddathogur Lake , Doddathoguru
+Vill,Bengaluru</b><br>Status: Neutral<br>BOD: 6.0 mg/L<br>DO: 5.6 mg/L<br>pH: 7.4<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8e6618f295f990e9372e860e499b338 = L.circleMarker(
+                [12.8568221, 77.6598479],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_f8e6618f295f990e9372e860e499b338.bindTooltip(
+                `<div>
+                     <b>Doddathogur Lake , Doddathoguru Vill,
+Bengaluru</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 3.3 mg/L<br>pH: 7.8<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20d06c508596fb70363358bbd40faab8 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_20d06c508596fb70363358bbd40faab8.bindTooltip(
+                `<div>
+                     <b>Gangonda-halli Lake</b><br>Status: Neutral<br>BOD: 11.0 mg/L<br>DO: 5.7 mg/L<br>pH: 7.7<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0d0e5b492e1e169babcdfd449a2b1b5 = L.circleMarker(
+                [13.0184239, 77.4741321],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_d0d0e5b492e1e169babcdfd449a2b1b5.bindTooltip(
+                `<div>
+                     <b>Gangondanahalli Lake</b><br>Status: Neutral<br>BOD: 9.0 mg/L<br>DO: 5.0 mg/L<br>pH: 7.2<br>Temp: 24.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47d418def460b00f27ba722e7ea678db = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_47d418def460b00f27ba722e7ea678db.bindTooltip(
+                `<div>
+                     <b>Kaikonda-halli Lake</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 4.6 mg/L<br>pH: 8.5<br>Temp: 29.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a52e703fbdb146bcc6267ba4e5dfa3c3 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_a52e703fbdb146bcc6267ba4e5dfa3c3.bindTooltip(
+                `<div>
+                     <b>Kale- Agrahara Lake</b><br>Status: Neutral<br>BOD: 6.0 mg/L<br>DO: 4.1 mg/L<br>pH: 7.8<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_566c2cde99e1ea1785836765a7c677d0 = L.circleMarker(
+                [12.8255739, 77.6950614],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_566c2cde99e1ea1785836765a7c677d0.bindTooltip(
+                `<div>
+                     <b>Kammasandra Lake</b><br>Status: Neutral<br>BOD: 6.0 mg/L<br>DO: 4.8 mg/L<br>pH: 7.5<br>Temp: 22.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f9c8e9ff8d75c580702fed14f9c6594 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_3f9c8e9ff8d75c580702fed14f9c6594.bindTooltip(
+                `<div>
+                     <b>Kasava-halli Lake</b><br>Status: Neutral<br>BOD: 6.0 mg/L<br>DO: 5.4 mg/L<br>pH: 7.6<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cc370cdeb49269767bc0bebf54a11b4 = L.circleMarker(
+                [12.9461146, 77.5840465],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_1cc370cdeb49269767bc0bebf54a11b4.bindTooltip(
+                `<div>
+                     <b>Lalbagh Tank</b><br>Status: Neutral<br>BOD: 4.0 mg/L<br>DO: 6.4 mg/L<br>pH: 7.7<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_503184fcafdaa03bdb21a16f62ada888 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_503184fcafdaa03bdb21a16f62ada888.bindTooltip(
+                `<div>
+                     <b>Mangama-palya Lake(Swara- Kunte)</b><br>Status: Neutral<br>BOD: 4.0 mg/L<br>DO: 4.2 mg/L<br>pH: 7.0<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_828b561eab4914d32b6e51757f0be025 = L.circleMarker(
+                [13.0448482, 77.6069212],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_828b561eab4914d32b6e51757f0be025.bindTooltip(
+                `<div>
+                     <b>Nagavara Lake</b><br>Status: Neutral<br>BOD: 5.0 mg/L<br>DO: 5.5 mg/L<br>pH: 7.0<br>Temp: 30.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_920e12cc40aca0efa9e84bf56d5a356a = L.circleMarker(
+                [12.9763221, 77.7452351],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_920e12cc40aca0efa9e84bf56d5a356a.bindTooltip(
+                `<div>
+                     <b>Pattandur Agrahara Lake</b><br>Status: Neutral<br>BOD: 10.0 mg/L<br>DO: 3.3 mg/L<br>pH: 7.1<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aeb16093fa45c51d196b257890634e24 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_aeb16093fa45c51d196b257890634e24.bindTooltip(
+                `<div>
+                     <b>Putte-halli Lake</b><br>Status: Neutral<br>BOD: 10.0 mg/L<br>DO: 4.6 mg/L<br>pH: 7.4<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5dec96e535934216e455d56e0e2d13ba = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_5dec96e535934216e455d56e0e2d13ba.bindTooltip(
+                `<div>
+                     <b>River Arkavathi At Tippagonda-halli
+Reservoir</b><br>Status: Neutral<br>BOD: 10.0 mg/L<br>DO: 5.5 mg/L<br>pH: 7.7<br>Temp: 29.4°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eace98ad09ee3789a7176ce1570e945b = L.circleMarker(
+                [12.8982781, 77.5791654],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_eace98ad09ee3789a7176ce1570e945b.bindTooltip(
+                `<div>
+                     <b>Sarakki Lake</b><br>Status: Neutral<br>BOD: 4.0 mg/L<br>DO: 6.5 mg/L<br>pH: 7.6<br>Temp: 29.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4107ea2af6e2ad930a0ebd40bd80a662 = L.circleMarker(
+                [12.9823687, 77.7131608],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_4107ea2af6e2ad930a0ebd40bd80a662.bindTooltip(
+                `<div>
+                     <b>Seetharampalya Lake</b><br>Status: Neutral<br>BOD: 11.0 mg/L<br>DO: 3.2 mg/L<br>pH: 7.3<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_845049c513ae41536bb4dc53724a29e0 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_845049c513ae41536bb4dc53724a29e0.bindTooltip(
+                `<div>
+                     <b>Segehalli Lake Baava-pura Road
+Battarahalli , Bangalore East</b><br>Status: Neutral<br>BOD: 12.0 mg/L<br>DO: 5.7 mg/L<br>pH: 7.2<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65d3d0ca219089090b3989c240bfaf37 = L.circleMarker(
+                [12.8824869, 77.6454373],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_65d3d0ca219089090b3989c240bfaf37.bindTooltip(
+                `<div>
+                     <b>Singasandra Lake</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 4.6 mg/L<br>pH: 8.0<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5846aafcc09467fb0582a210a3f01a48 = L.circleMarker(
+                [12.9823891, 77.6191669],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_5846aafcc09467fb0582a210a3f01a48.bindTooltip(
+                `<div>
+                     <b>Ulsoor Lake Near
+Kalyani,Bengaluru</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 5.4 mg/L<br>pH: 8.5<br>Temp: 30.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77b6f2ed28161caf19b1f8c7c90dce00 = L.circleMarker(
+                [12.9823891, 77.6191669],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_77b6f2ed28161caf19b1f8c7c90dce00.bindTooltip(
+                `<div>
+                     <b>Ulsoor Lake Near Kalyani,Bengaluru</b><br>Status: Neutral<br>BOD: 7.0 mg/L<br>DO: 4.9 mg/L<br>pH: 8.2<br>Temp: 29.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_321ccace9cace6b742b17450618fd9c1 = L.circleMarker(
+                [12.9823891, 77.6191669],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_321ccace9cace6b742b17450618fd9c1.bindTooltip(
+                `<div>
+                     <b>Ulsoor Lake Temple</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 5.4 mg/L<br>pH: 8.5<br>Temp: 30.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99fa848d21844c8cdc1aad5c40233144 = L.circleMarker(
+                [12.9823891, 77.6191669],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_99fa848d21844c8cdc1aad5c40233144.bindTooltip(
+                `<div>
+                     <b>Ulsoor Lake Training Centre
+Of Fish Breeding</b><br>Status: Neutral<br>BOD: 13.0 mg/L<br>DO: 5.0 mg/L<br>pH: 8.5<br>Temp: 28.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b0128d99cfe13e9ccca003a3bb40173 = L.circleMarker(
+                [12.9823891, 77.6191669],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_5b0128d99cfe13e9ccca003a3bb40173.bindTooltip(
+                `<div>
+                     <b>Ulsoor Lake Training Centre Of
+Fish Breeding</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 5.2 mg/L<br>pH: 8.5<br>Temp: 30.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6671907929ffdbfb266cfc65712a904b = L.circleMarker(
+                [12.9823891, 77.6191669],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_6671907929ffdbfb266cfc65712a904b.bindTooltip(
+                `<div>
+                     <b>Ulsoor Lake Training Centre Of Fish
+Breeding</b><br>Status: Neutral<br>BOD: 8.0 mg/L<br>DO: 4.4 mg/L<br>pH: 8.2<br>Temp: 29.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93d0fa54c3c5ea37d34ce97fba588013 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_99787cefcd278f435ebbce9d88ea6d7a);
+        
+    
+            circle_marker_93d0fa54c3c5ea37d34ce97fba588013.bindTooltip(
+                `<div>
+                     <b>Vengaiyya-kere( Kr Puram Lake )</b><br>Status: Neutral<br>BOD: 12.0 mg/L<br>DO: 5.4 mg/L<br>pH: 6.8<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_99787cefcd278f435ebbce9d88ea6d7a.addTo(map_81e1aae4e62bdfa178cdb2271868128f);
+        
+    
+            var feature_group_bdcb644c432a3249a0080393d75bb7f3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_ce429329343087546d7fb9682b51b423 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_ce429329343087546d7fb9682b51b423.bindTooltip(
+                `<div>
+                     <b>#NAME?</b><br>Status: Critical<br>BOD: 18.0 mg/L<br>DO: 2.4 mg/L<br>pH: 8.4<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e87d8fb0ad24f298a7ed238558890f1 = L.circleMarker(
+                [13.090997, 77.5868301],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_6e87d8fb0ad24f298a7ed238558890f1.bindTooltip(
+                `<div>
+                     <b>Allalasandra Lake</b><br>Status: Critical<br>BOD: 25.0 mg/L<br>DO: 1.9 mg/L<br>pH: 7.0<br>Temp: 32.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39357f68a2aa165fa191063874329aaa = L.circleMarker(
+                [13.0104928, 77.7121299],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_39357f68a2aa165fa191063874329aaa.bindTooltip(
+                `<div>
+                     <b>Basavanapura Lake Ayyappa
+Nagr Main Road , K. R. Puram</b><br>Status: Critical<br>BOD: 26.0 mg/L<br>DO: 2.4 mg/L<br>pH: 7.2<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_137b8ab52397459ce8a2a85f3f21c13b = L.circleMarker(
+                [12.9371445, 77.6720227],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_137b8ab52397459ce8a2a85f3f21c13b.bindTooltip(
+                `<div>
+                     <b>Bellandur Lake</b><br>Status: Critical<br>BOD: 30.0 mg/L<br>DO: 2.4 mg/L<br>pH: 7.4<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d20d9106e76b76d1ce621845bbb1195d = L.circleMarker(
+                [13.0243275, 77.7091299],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_d20d9106e76b76d1ce621845bbb1195d.bindTooltip(
+                `<div>
+                     <b>Bhattarahalli Lake</b><br>Status: Critical<br>BOD: 21.0 mg/L<br>DO: 2.7 mg/L<br>pH: 7.3<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75a8bec32599667a07ff481c6f7461ed = L.circleMarker(
+                [13.0267877, 77.6454951],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_75a8bec32599667a07ff481c6f7461ed.bindTooltip(
+                `<div>
+                     <b>Chelekere Lake</b><br>Status: Critical<br>BOD: 4.0 mg/L<br>DO: 6.1 mg/L<br>pH: 6.9<br>Temp: 32.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e7110022bebee5f1225e3ac54d44522 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_6e7110022bebee5f1225e3ac54d44522.bindTooltip(
+                `<div>
+                     <b>Chin-kurchi Kere</b><br>Status: Critical<br>BOD: 4.0 mg/L<br>DO: 6.3 mg/L<br>pH: 7.7<br>Temp: 31.2°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7cde2fea5b7233eabfe0b3bdd954a1f = L.circleMarker(
+                [12.9658555, 77.7069514],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_d7cde2fea5b7233eabfe0b3bdd954a1f.bindTooltip(
+                `<div>
+                     <b>Chinnappanahalli Lake</b><br>Status: Critical<br>BOD: 18.0 mg/L<br>DO: 1.2 mg/L<br>pH: 7.3<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ea50774340c3fe46a4b2f0c6359b655 = L.circleMarker(
+                [13.0411364, 77.5124586],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_9ea50774340c3fe46a4b2f0c6359b655.bindTooltip(
+                `<div>
+                     <b>Dasarahalli Tank</b><br>Status: Critical<br>BOD: 21.0 mg/L<br>DO: 2.3 mg/L<br>pH: 7.0<br>Temp: 24.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf8b95540228f388928de225cecb74e9 = L.circleMarker(
+                [12.9909427, 77.6959734],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_bf8b95540228f388928de225cecb74e9.bindTooltip(
+                `<div>
+                     <b>Garudacharpalya Lake-2</b><br>Status: Critical<br>BOD: 25.0 mg/L<br>DO: 2.2 mg/L<br>pH: 7.1<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0c406f464dd84fd7bd9e3e26000ea58 = L.circleMarker(
+                [12.8971628, 77.6628189],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_b0c406f464dd84fd7bd9e3e26000ea58.bindTooltip(
+                `<div>
+                     <b>Haralur Lake</b><br>Status: Critical<br>BOD: 26.0 mg/L<br>DO: 2.6 mg/L<br>pH: 7.3<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ced9ed44aa7aba0b655314f33f23b5e5 = L.circleMarker(
+                [13.0472025, 77.5867147],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_ced9ed44aa7aba0b655314f33f23b5e5.bindTooltip(
+                `<div>
+                     <b>Hebbal Lake</b><br>Status: Critical<br>BOD: 19.0 mg/L<br>DO: 2.9 mg/L<br>pH: 6.8<br>Temp: 30.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_239928c14a56964286d919c346c09047 = L.circleMarker(
+                [13.0867157, 77.6116693],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_239928c14a56964286d919c346c09047.bindTooltip(
+                `<div>
+                     <b>Jakkur Lake</b><br>Status: Critical<br>BOD: 25.0 mg/L<br>DO: 1.8 mg/L<br>pH: 7.0<br>Temp: 32.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e60a53ba66945ea41fc72d7567e73b76 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_e60a53ba66945ea41fc72d7567e73b76.bindTooltip(
+                `<div>
+                     <b>Kammagonda-halli Lake</b><br>Status: Critical<br>BOD: 12.0 mg/L<br>DO: 2.1 mg/L<br>pH: 6.5<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5481c5da6f0206569378f453817ab86a = L.circleMarker(
+                [13.0685129, 77.5241545],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_5481c5da6f0206569378f453817ab86a.bindTooltip(
+                `<div>
+                     <b>Kammagondanahalli Lake</b><br>Status: Critical<br>BOD: 40.0 mg/L<br>DO: 2.5 mg/L<br>pH: 7.0<br>Temp: 24.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e1c0907e796e6fce4c29d9238f678f66 = L.circleMarker(
+                [13.0288051, 77.7743346],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_e1c0907e796e6fce4c29d9238f678f66.bindTooltip(
+                `<div>
+                     <b>Kannamangala Lake Hoskote Main Road ,
+Bengalore</b><br>Status: Critical<br>BOD: 18.0 mg/L<br>DO: 2.4 mg/L<br>pH: 7.8<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_490aec3a8ca976a9e65b58e4dc6edbf2 = L.circleMarker(
+                [13.0288051, 77.7743346],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_490aec3a8ca976a9e65b58e4dc6edbf2.bindTooltip(
+                `<div>
+                     <b>Kannamangala Lake Hoskote Main Road , Bengalore</b><br>Status: Critical<br>BOD: 38.0 mg/L<br>DO: 0.6 mg/L<br>pH: 6.7<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_639ca74ef9951db2dfbb8668255696cc = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_639ca74ef9951db2dfbb8668255696cc.bindTooltip(
+                `<div>
+                     <b>Karihoba-halli Lake</b><br>Status: Critical<br>BOD: 15.0 mg/L<br>DO: 1.0 mg/L<br>pH: 6.6<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8dce7000a9a9da7bab9de089314fb19 = L.circleMarker(
+                [12.9693696, 77.7207209],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_a8dce7000a9a9da7bab9de089314fb19.bindTooltip(
+                `<div>
+                     <b>Kundalahalli Lake</b><br>Status: Critical<br>BOD: 15.0 mg/L<br>DO: 1.6 mg/L<br>pH: 7.3<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5fa2f7adcac8cb77f61ab40784c8de4c = L.circleMarker(
+                [12.9873518, 77.6922244],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_5fa2f7adcac8cb77f61ab40784c8de4c.bindTooltip(
+                `<div>
+                     <b>Mahadevapura Lake-2</b><br>Status: Critical<br>BOD: 29.0 mg/L<br>DO: 1.9 mg/L<br>pH: 7.0<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ffafa901282263a358a5e9afff63448 = L.circleMarker(
+                [12.9743416, 77.7358735],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_1ffafa901282263a358a5e9afff63448.bindTooltip(
+                `<div>
+                     <b>Nallurahalli Lake</b><br>Status: Critical<br>BOD: 22.0 mg/L<br>DO: 2.3 mg/L<br>pH: 7.3<br>Temp: 25.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88b3dcccde5801824d2defda963f6bb4 = L.circleMarker(
+                [13.0722631, 77.5576673],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_88b3dcccde5801824d2defda963f6bb4.bindTooltip(
+                `<div>
+                     <b>Narasipura Lake</b><br>Status: Critical<br>BOD: 4.0 mg/L<br>DO: 6.2 mg/L<br>pH: 7.2<br>Temp: 32.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7eba364767ae37dcf70d67e7ddba2d1b = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_7eba364767ae37dcf70d67e7ddba2d1b.bindTooltip(
+                `<div>
+                     <b>Parappa- Agrahara Lake</b><br>Status: Critical<br>BOD: 29.0 mg/L<br>DO: 2.5 mg/L<br>pH: 7.0<br>Temp: 27.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e9acd5c8ac6271be6035c17b61151906 = L.circleMarker(
+                [13.1119851, 77.5770582],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_e9acd5c8ac6271be6035c17b61151906.bindTooltip(
+                `<div>
+                     <b>Puttenahalli Lake</b><br>Status: Critical<br>BOD: 7.0 mg/L<br>DO: 5.3 mg/L<br>pH: 6.6<br>Temp: 32.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3580b192559d4f7f4f0e1e8b0901733c = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_3580b192559d4f7f4f0e1e8b0901733c.bindTooltip(
+                `<div>
+                     <b>Rache-halli Lake</b><br>Status: Critical<br>BOD: 22.0 mg/L<br>DO: 1.2 mg/L<br>pH: 7.6<br>Temp: 30.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f1928c7f1a71151936c9607e2719d22 = L.circleMarker(
+                [13.0624602, 77.6124088],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_8f1928c7f1a71151936c9607e2719d22.bindTooltip(
+                `<div>
+                     <b>Rachenahalli Lake</b><br>Status: Critical<br>BOD: 40.0 mg/L<br>DO: 2.5 mg/L<br>pH: 6.8<br>Temp: 31.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_daffcf80ac19cde9b3560098e68eaa00 = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_daffcf80ac19cde9b3560098e68eaa00.bindTooltip(
+                `<div>
+                     <b>Ramamma- Kere</b><br>Status: Critical<br>BOD: 16.0 mg/L<br>DO: 1.7 mg/L<br>pH: 6.6<br>Temp: 26.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec06fecd5e90321892f9c5ac3d55814b = L.circleMarker(
+                [12.8706046, 77.6776566],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_ec06fecd5e90321892f9c5ac3d55814b.bindTooltip(
+                `<div>
+                     <b>Rayasandra Lake</b><br>Status: Critical<br>BOD: 32.0 mg/L<br>DO: 0.9 mg/L<br>pH: 7.4<br>Temp: 20.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c36bbfd09d615cf7733210e14d81a544 = L.circleMarker(
+                [13.0818088, 77.5351268],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_c36bbfd09d615cf7733210e14d81a544.bindTooltip(
+                `<div>
+                     <b>Singapura Lake</b><br>Status: Critical<br>BOD: 4.0 mg/L<br>DO: 6.2 mg/L<br>pH: 7.0<br>Temp: 32.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7ba73e187ea8d34e7f25d22216c3c518 = L.circleMarker(
+                [12.9823891, 77.6191669],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_7ba73e187ea8d34e7f25d22216c3c518.bindTooltip(
+                `<div>
+                     <b>Ulsoor Lake Training Centre Of Fish Breeding</b><br>Status: Critical<br>BOD: 22.0 mg/L<br>DO: 2.2 mg/L<br>pH: 7.9<br>Temp: 29.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0db8b5dba573b2c65e0b8c54a19d0de = L.circleMarker(
+                [12.935001, 77.5931866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bdcb644c432a3249a0080393d75bb7f3);
+        
+    
+            circle_marker_c0db8b5dba573b2c65e0b8c54a19d0de.bindTooltip(
+                `<div>
+                     <b>Yelache-halli Lake</b><br>Status: Critical<br>BOD: 4.0 mg/L<br>DO: 6.3 mg/L<br>pH: 8.0<br>Temp: 31.0°C<br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_bdcb644c432a3249a0080393d75bb7f3.addTo(map_81e1aae4e62bdfa178cdb2271868128f);
+        
+    
+            var layer_control_db93206a611a170fa5df3668a54d3faf_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_5ddea291d8f5292ffb57b389f165941c,
+                },
+                overlays :  {
+                    "\ud83d\udfe2 Good Quality" : feature_group_5ff78c10e0e755cf36de79f665b0e93d,
+                    "\ud83d\udfe0 Neutral Quality" : feature_group_99787cefcd278f435ebbce9d88ea6d7a,
+                    "\ud83d\udd34 Critical Quality" : feature_group_bdcb644c432a3249a0080393d75bb7f3,
+                },
+            };
+            let layer_control_db93206a611a170fa5df3668a54d3faf = L.control.layers(
+                layer_control_db93206a611a170fa5df3668a54d3faf_layers.base_layers,
+                layer_control_db93206a611a170fa5df3668a54d3faf_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_81e1aae4e62bdfa178cdb2271868128f);
+
+        
+</script>
+</html>
