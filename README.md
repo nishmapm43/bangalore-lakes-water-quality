@@ -103,4 +103,4 @@ Data is sourced from KSPCB's publicly released monthly lake water quality monito
 ## Author
 
 **Nishma Medappa**
-[LinkedIn](www.linkedin.com/in/nishmapm)  [GitHub](https://github.com/nishmapm43)
+[LinkedIn](https://www.linkedin.com/in/nishmapm) [GitHub](https://github.com/nishmapm43)
