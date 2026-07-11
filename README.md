@@ -2,6 +2,7 @@
 **Tracking pollution hotspots across 19 major Bangalore lakes using 13 months of official monitoring data (Nov 2024 – Nov 2025).**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit)](https://bangalore-lakes-water-quality-z58p97mdlbwykukh8di2n5.streamlit.app/)
+[**🗺️ Click here to open the live interactive map**](https://nishmapm43.github.io/bangalore-lakes-water-quality/final_dashboard_map.html)
 
 
 ---
