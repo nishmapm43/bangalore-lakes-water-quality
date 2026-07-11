@@ -11,9 +11,8 @@
 Bangalore's lakes are under constant pollution pressure, but the official monitoring data — published monthly by the Karnataka State Pollution Control Board (KSPCB) as scanned PDF reports — is hard to use in its raw form. This project turns those PDFs into a clean, analyzable dataset and builds four different views into lake health:
 
 1. **A racing bar chart** ranking lakes by Biochemical Oxygen Demand (BOD) every month, to spot which lakes are chronic pollution hotspots vs. one-off spikes.
-2. **Dissolved Oxygen (DO) trend charts** comparing each lake's oxygen trajectory against the minimum healthy threshold (4.0 mg/L).
-3. **An interactive map** plotting every monitored lake by location and current water quality status.
-4. **A "what-if" recovery simulator** (Streamlit app) that predicts how much DO would improve if BOD pollution were reduced by a given amount — a simple tool for exploring intervention impact.
+2. **An interactive map** plotting every monitored lake by location and current water quality status.
+3. **A "what-if" recovery simulator** (Streamlit app) that predicts how much DO would improve if BOD pollution were reduced by a given amount — a simple tool for exploring intervention impact.
 
 ## Live Demo
 🔗 **[Try the DO Recovery Simulator]([YOUR_STREAMLIT_LINK_HERE](https://bangalore-lakes-water-quality-z58p97mdlbwykukh8di2n5.streamlit.app/))**
