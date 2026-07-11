@@ -1,6 +1,6 @@
 # Outreach Content — Bangalore Lakes Water Quality Project
 
-Fill in the bracketed placeholders before using ([GitHub link], [Streamlit link], [your name], etc.)
+Fill in the bracketed placeholders before using ((https://github.com/nishmapm43/bangalore-lakes-water-quality)], [(https://bangalore-lakes-water-quality-z58p97mdlbwykukh8di2n5.streamlit.app/)], [Nishma P.M], etc.)
 
 ---
 
@@ -21,8 +21,8 @@ I spent the last few weeks turning a stack of government PDF reports into a work
 **One finding that surprised me:** Jakkur Lake, often cited as a lake-restoration success story, was below the healthy oxygen threshold in 7 of the 13 months — a reminder that public reputation and current data don't always agree.
 
 Full write-up, code, and the live simulator are linked below 👇
-🔗 GitHub: [GitHub link]
-🔗 Live demo: [Streamlit link]
+🔗 GitHub: https://github.com/nishmapm43/bangalore-lakes-water-quality)]
+🔗 Live demo: https://bangalore-lakes-water-quality-z58p97mdlbwykukh8di2n5.streamlit.app/
 
 Would love feedback from anyone working in environmental data, GIS, or public-sector analytics.
 
