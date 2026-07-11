@@ -1,7 +1,7 @@
 # Bangalore Lakes Water Quality Analysis
 **Tracking pollution hotspots across 19 major Bangalore lakes using 13 months of official monitoring data (Nov 2024 – Nov 2025).**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit)](YOUR_STREAMLIT_LINK_HERE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit)]([YOUR_STREAMLIT_LINK_HERE](https://bangalore-lakes-water-quality-z58p97mdlbwykukh8di2n5.streamlit.app/))
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
 
 ---
@@ -16,7 +16,7 @@ Bangalore's lakes are under constant pollution pressure, but the official monito
 4. **A "what-if" recovery simulator** (Streamlit app) that predicts how much DO would improve if BOD pollution were reduced by a given amount — a simple tool for exploring intervention impact.
 
 ## Live Demo
-🔗 **[Try the DO Recovery Simulator](YOUR_STREAMLIT_LINK_HERE)**
+🔗 **[Try the DO Recovery Simulator]([YOUR_STREAMLIT_LINK_HERE](https://bangalore-lakes-water-quality-z58p97mdlbwykukh8di2n5.streamlit.app/))**
 
 ## Key Findings
 
@@ -31,10 +31,7 @@ Watch which lakes stay at the top of the pollution ranking month after month.
 
 ![BOD Racing Bar Chart](bod_race_final.gif)
 
-### Dissolved Oxygen Trajectories
-Each panel shows one chronically low-oxygen lake against the 4.0 mg/L health threshold.
 
-![DO Trend Small Multiples](do_small_multiples.png)
 
 ### Interactive Lake Map
 An interactive Folium map plotting all monitored lakes — [view the map](final_dashboard_map.html) (download and open in a browser, or see the live-hosted version linked above).
