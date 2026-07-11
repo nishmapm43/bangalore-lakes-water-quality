@@ -14,7 +14,7 @@ Bangalore's lakes are under constant pollution pressure, but the official monito
 2. **An interactive map** plotting every monitored lake by location and current water quality status.
 3. **A "what-if" recovery simulator** (Streamlit app) that predicts how much DO would improve if BOD pollution were reduced by a given amount — a simple tool for exploring intervention impact.
 
-KEY FINDINGS
+## Key Findings
 
 - **7 of 19 major lakes are chronically oxygen-deficient** — Dissolved Oxygen fell below the healthy minimum (4.0 mg/L) in 3 or more of the 13 months studied. Jakkur Lake was the worst, sitting below the threshold in **7 of 13 months** despite its public reputation as a lake-restoration success story.
 - **Lalbagh Tank recorded an isolated BOD spike of 56 mg/L in August 2025** — more than double any other tracked lake that month, flagged as a candidate for follow-up investigation (event-driven pollution vs. sustained decline).
@@ -41,7 +41,7 @@ A Streamlit what-if tool: select a lake, simulate a BOD reduction, and see the p
 ![Simulator Preview](simulator_preview.png)
 
 🔗 **[Try the DO Recovery Simulator](https://bangalore-lakes-water-quality-z58p97mdlbwykukh8di2n5.streamlit.app/))**
-## Key Findings
+
 
 ## Data Pipeline
 
