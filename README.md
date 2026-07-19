@@ -25,7 +25,9 @@ Bangalore's lakes are under constant pollution pressure, but the official monito
 ### BOD Racing Bar Chart
 Watch which lakes stay at the top of the pollution ranking month after month.
 
-![BOD Racing Bar Chart](bod_race_final.gif)
+<video src="https://github.com/nishmapm43/bangalore-lakes-water-quality/raw/main/Banglore-lake-racing_bar_chart.mp4" controls width="700">
+  Your browser does not support the video tag.
+</video>
 
 ### Power BI Dashboard — Bengaluru Lake Water Quality Monitor
 An interactive Power BI dashboard tracking BOD and Dissolved Oxygen across all 19 lakes, built for ongoing monitoring rather than a single analysis.
