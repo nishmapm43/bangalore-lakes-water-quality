@@ -24,6 +24,7 @@ Bangalore's lakes are under constant pollution pressure, but the official monito
 
 ### BOD Racing Bar Chart
 Watch which lakes stay at the top of the pollution ranking month after month.
+
 https://github.com/user-attachments/assets/2d6f92dd-15d9-4aad-9c03-481ba25c495e
 
 ### Power BI Dashboard — Bengaluru Lake Water Quality Monitor
