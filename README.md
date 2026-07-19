@@ -32,7 +32,6 @@ An interactive Power BI dashboard tracking BOD and Dissolved Oxygen across all 1
 
 ![Power BI Dashboard](lakepowerbi.png)
 
-### Power BI Dashboard — Bengaluru Lake Water Quality Monitor
 📊 **[Download/open the Power BI dashboard file](https://github.com/nishmapm43/bangalore-lakes-water-quality/blob/main/Bengaluru%20Lake%20Water%20Quality%20Monitor.pbix)**
 
 
