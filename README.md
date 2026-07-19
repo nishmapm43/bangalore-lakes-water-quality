@@ -36,7 +36,6 @@ An interactive Power BI dashboard tracking BOD and Dissolved Oxygen across all 1
 📊 **[Download/open the Power BI dashboard file](https://github.com/nishmapm43/bangalore-lakes-water-quality/blob/main/Bengaluru%20Lake%20Water%20Quality%20Monitor.pbix)**
 
 
-![Power BI Dashboard](lakepowerbi.png)
 **What's in the dashboard:**
 - **Geographic panels** — two side-by-side maps plotting every lake by BOD and Dissolved Oxygen severity, color-graded (note: for BOD, darker = worse; for DO, higher = healthier — an intentionally opposite color logic worth calling out when presenting this panel).
 - **Lake Trend Summary table** — one row per lake, showing average BOD, a plain-language trend label (e.g. "Improving," "Worsening," "Stable"), and the underlying trend slope, computed via a linear regression built from five supporting DAX measures.
