@@ -54,7 +54,6 @@ I built a pipeline that turns 13 months of these government PDFs into a single, 
 - Found and fixed a hidden data-quality bug: the PDF-to-text extraction had silently corrupted lake names (e.g. splitting "Karihobanahalli" into "Karihoba" + "-Halli"), fragmenting single lakes into multiple fake entries. Using fuzzy string matching, I merged these duplicates — reducing 174 raw name variants down to ~140 genuinely distinct lakes.
 - Built a racing bar chart ranking 19 well-known lakes by pollution (BOD) every month, to separate chronic hotspots from one-off spikes.
 - Built an interactive Power BI dashboard (detailed above) for ongoing, at-a-glance monitoring — including a custom DAX-based trend regression, cross-validated compliance metrics, and an explicit data-gap classification.
-- Built a "what-if" recovery simulator (Streamlit) that predicts how much a lake's Dissolved Oxygen would recover if BOD pollution were reduced by a chosen amount.
 
 ## What Could Come Next
 - Extend the pipeline to automatically ingest new KSPCB monthly reports as they're published, rather than a fixed 13-month window.
@@ -86,7 +85,7 @@ bangalore-lakes-water-quality/
 ├── do_recovery_simulator.py     # Streamlit DO Recovery Simulator app
 ├── bod_race_final.gif
 ├── lakepowerbi.png              # Power BI dashboard screenshot
-└── lake_dashboard.pbix          # Power BI dashboard file
+└── Bengaluru Lake Water Quality Monitor.pbix   # Power BI dashboard file
 ```
 
 ## Running Locally
