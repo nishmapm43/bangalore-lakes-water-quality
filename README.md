@@ -47,7 +47,7 @@ An interactive Power BI dashboard tracking BOD and Dissolved Oxygen across all 1
 ## Why This Project
 Bengaluru's lakes are under constant pollution pressure, but the data that could actually help track and fix this — monthly water-quality reports from the Karnataka State Pollution Control Board (KSPCB) — is published as scanned PDF documents, not usable datasets. Anyone wanting to understand lake health over time first has to manually read through dozens of PDF reports.
 
-I built a pipeline that turns 13 months of these government PDFs into a single, clean dataset, then used it to answer a simple question: which Bangalore lakes are chronically polluted, which are improving, and which had one-off pollution events worth investigating?
+I built a pipeline that turns 13 months of these government PDFs into a single, clean dataset, then used it to answer a simple question:which Bangalore lakes are chronically polluted, which are improving, and which had one-off pollution events worth investigating?
 
 ## What I Did
 - Extracted water-quality data from 13 monthly KSPCB PDF reports (Nov 2024 – Nov 2025) using `pdfplumber`, pulling out station-level readings for BOD, Dissolved Oxygen, pH, temperature, and more.
