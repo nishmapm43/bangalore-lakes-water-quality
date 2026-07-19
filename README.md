@@ -1,6 +1,6 @@
 # Bangalore Lakes Water Quality Analysis
 **Tracking pollution hotspots across 19 major Bangalore lakes using 13 months of official monitoring data (Nov 2024 – Nov 2025).**
-[Power BI Dashboard](lakepowerbi.png)
+![Power BI Dashboard](lakepowerbi.png)
 
 ---
 
