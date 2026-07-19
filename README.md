@@ -98,11 +98,10 @@ pip install -r requirements.txt
 # Regenerate the racing bar chart
 python racing_bar_chart.py
 
-# Launch the interactive simulator
-streamlit run do_recovery_simulator.py
+
 ```
 
-Open `lake_dashboard.pbix` in Power BI Desktop to explore the dashboard interactively.
+Open `Bengaluru Lake Water Quality Monitor.pbix` in Power BI Desktop to explore the dashboard interactively.
 
 ## Data Source & Limitations
 
